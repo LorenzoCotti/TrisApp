@@ -1,5 +1,6 @@
 package it.lorenzocotti.trisapp;
 
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -80,13 +81,15 @@ public class MainActivity extends AppCompatActivity {
     private void startGame(int cell, Button button) {
 
         if(onlinePlayer == 1) {    //turno gioc.1
-            button.setText("X");
+            String mystring = button.getResources().getString(R.string.cross_sign);
+            button.setText(mystring);
             button.setBackgroundResource(R.color.giocatore1);
             player1.add(cell);   //cell viene occupata da player1
             onlinePlayer = 2;
             multiplayer();
         } else {
-            button.setText("O");
+            String mystring = button.getResources().getString(R.string.square_sign);
+            button.setText(mystring);
             button.setBackgroundResource(R.color.giocatore2);
             player2.add(cell);
             onlinePlayer = 1;
