@@ -83,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         if(onlinePlayer == 1) {    //turno gioc.1
             String mystring = button.getResources().getString(R.string.cross_sign);
             button.setText(mystring);
+            button.setTextSize(30);
             button.setBackgroundResource(R.color.giocatore1);
             player1.add(cell);   //cell viene occupata da player1
             onlinePlayer = 2;
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             String mystring = button.getResources().getString(R.string.square_sign);
             button.setText(mystring);
+            button.setTextSize(30);
             button.setBackgroundResource(R.color.giocatore2);
             player2.add(cell);
             onlinePlayer = 1;

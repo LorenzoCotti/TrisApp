@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
+    android:background="#FAEBD7"
     android:gravity="center"
     tools:context=".MainActivity">
 
-    <TableRow
+    <LinearLayout
+        android:id="@+id/first_row"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal">
+        android:layout_height="80dp"
+        android:gravity="center">
 
         <Button
             android:id="@+id/b1"
@@ -20,66 +20,69 @@
             android:layout_height="80dp"
             android:onClick="clickOnButton" />
 
-        <Button
-            android:id="@+id/b2"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:onClick="clickOnButton" />
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="clickOnButton" />
 
-        <Button
-            android:id="@+id/b3"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:onClick="clickOnButton" />
-    </TableRow>
+    <Button
+        android:id="@+id/b3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="clickOnButton" />
+    </LinearLayout>
 
-    <TableRow
+    <LinearLayout
+        android:id="@+id/second_row"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal">
+        android:layout_height="80dp"
+        android:layout_below="@id/first_row"
+        android:gravity="center">
 
-        <Button
-            android:id="@+id/b4"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:onClick="clickOnButton" />
+    <Button
+        android:id="@+id/b4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="clickOnButton" />
 
-        <Button
-            android:id="@+id/b5"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:onClick="clickOnButton" />
+    <Button
+        android:id="@+id/b5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="clickOnButton" />
 
-        <Button
-            android:id="@+id/b6"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:onClick="clickOnButton" />
-    </TableRow>
+    <Button
+        android:id="@+id/b6"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="clickOnButton" />
+    </LinearLayout>
 
-    <TableRow
+    <LinearLayout
+        android:id="@+id/third_row"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal">
+        android:layout_height="80dp"
+        android:layout_below="@id/second_row"
+        android:gravity="center">
 
-        <Button
-            android:id="@+id/b7"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:onClick="clickOnButton"/>
+    <Button
+        android:id="@+id/b7"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="clickOnButton" />
 
-        <Button
-            android:id="@+id/b8"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:onClick="clickOnButton"/>
+    <Button
+        android:id="@+id/b8"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="clickOnButton" />
 
-        <Button
-            android:id="@+id/b9"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:onClick="clickOnButton"/>
-    </TableRow>
-</TableLayout>
+    <Button
+        android:id="@+id/b9"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="clickOnButton" />
+    </LinearLayout>
+
+</RelativeLayout>
