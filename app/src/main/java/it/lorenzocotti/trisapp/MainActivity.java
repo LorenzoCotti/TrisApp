@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickOnButton(View view) {
-        int id = view.getId();
+        Button button = (Button) view;
+        int id = button.getId();
         int cell = 0;
 
         switch (id) {
@@ -57,5 +62,28 @@ public class MainActivity extends AppCompatActivity {
                 cell = 9;
                 break;
         }
+
+        startGame(cell, button);
+    }
+
+    List<Integer> player1 = new ArrayList<>();
+    List<Integer> player2 = new ArrayList<>();
+    int onlinePlayer = 1;  //turno giocatore 1 o giocatore 2?
+
+    private void startGame(int cell, Button button) {
+
+        if(onlinePlayer == 1) {    //turno gioc.1
+            button.setText("X");
+            button.setBackgroundResource(R.color.giocatore1);
+            player1.add(cell);   //cell viene occupata da player1
+            onlinePlayer = 2;
+        } else {
+            button.setText("O");
+            button.setBackgroundResource(R.color.giocatore2);
+            player2.add(cell);
+            onlinePlayer = 1;
+        }
+
+        button.setEnabled(false);
     }
 }
