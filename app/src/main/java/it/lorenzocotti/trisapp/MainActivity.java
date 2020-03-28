@@ -232,6 +232,17 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(getApplicationContext(), "Ha vinto il giocatore 2!", Toast.LENGTH_SHORT).show();
             }
+
+            //blocco bottoni
+            b1.setEnabled(false);
+            b2.setEnabled(false);
+            b3.setEnabled(false);
+            b4.setEnabled(false);
+            b5.setEnabled(false);
+            b6.setEnabled(false);
+            b7.setEnabled(false);
+            b8.setEnabled(false);
+            b9.setEnabled(false);
         }
     }
 
