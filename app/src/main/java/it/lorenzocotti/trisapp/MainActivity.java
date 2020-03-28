@@ -3,6 +3,7 @@ package it.lorenzocotti.trisapp;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +15,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
+    private Button b1, b2, b3, b4, b5, b6, b7, b8, b9, reset;
     private static int conta = 0;
 
     @Override
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         b7 = findViewById(R.id.b7);
         b8 = findViewById(R.id.b8);
         b9 = findViewById(R.id.b9);
+        reset = findViewById(R.id.reset);
 
     }
 
@@ -69,6 +71,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.b9:
                 cell = 9;
                 break;
+
+            case R.id.reset:
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
         }
 
         startGame(cell, button);
