@@ -1,10 +1,12 @@
 package it.lorenzocotti.trisapp;
 
 import androidx.annotation.StringRes;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -15,8 +17,10 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button b1, b2, b3, b4, b5, b6, b7, b8, b9, reset;
+    public Button b1, b2, b3, b4, b5, b6, b7, b8, b9, reset, multi_computer, multi_locale;
     private static int conta = 0;
+    private  int choice = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +38,31 @@ public class MainActivity extends AppCompatActivity {
         b9 = findViewById(R.id.b9);
         reset = findViewById(R.id.reset);
 
+        multi_computer = findViewById(R.id.multi_computer);
+        multi_locale = findViewById(R.id.multi_locale);
+        Button buttonLocalPlay = (Button)findViewById(R.id.multi_locale);
+        Button buttonComputerPlay = (Button)findViewById(R.id.multi_computer);
+
+        buttonComputerPlay.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                choice = 1;
+            }
+        });
+
+        buttonLocalPlay.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+
+                choice = 0;
+            }
+        });
+
     }
+
 
     public void clickOnButton(View view) {
         Button button = (Button) view;
@@ -76,10 +104,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = getIntent();
                 finish();
                 startActivity(intent);
+                break;
+
         }
 
         startGame(cell, button);
     }
+
+
 
     List<Integer> player1 = new ArrayList<>();
     List<Integer> player2 = new ArrayList<>();
@@ -94,7 +126,9 @@ public class MainActivity extends AppCompatActivity {
             button.setBackgroundResource(R.color.giocatore1);
             player1.add(cell);   //cell viene occupata da player1
             onlinePlayer = 2;
-            multiplayer();
+            if (choice == 1) {
+                multiplayer();
+            }
         } else {
             String mystring = button.getResources().getString(R.string.square_sign);
             button.setText(mystring);
@@ -107,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
         button.setEnabled(false);
         checkWinner();
     }
+
 
     private void multiplayer() {
         if (conta<10/2) {
@@ -233,7 +268,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Ha vinto il giocatore 2!", Toast.LENGTH_SHORT).show();
             }
 
-            //blocco bottoni
+            //blocco dei bottoni
             b1.setEnabled(false);
             b2.setEnabled(false);
             b3.setEnabled(false);

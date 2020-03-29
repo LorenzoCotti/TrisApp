@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
     android:background="#FAEBD7"
     android:gravity="center"
     tools:context=".MainActivity">
@@ -90,10 +89,31 @@
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Reset"
         android:layout_below="@+id/third_row"
         android:layout_centerInParent="true"
-        android:layout_marginTop="100px"
-        android:onClick="clickOnButton" />
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#D68814"
+        android:onClick="clickOnButton"
+        android:text="@string/resetstring" />
+    <Button
+        android:id="@+id/multi_computer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1vsAI"
+        android:layout_below="@+id/third_row"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        />
+
+    <Button
+        android:id="@+id/multi_locale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1vs1"
+        android:layout_below="@+id/third_row"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="50dp"
+        />
+
 
 </RelativeLayout>

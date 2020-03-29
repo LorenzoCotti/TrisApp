@@ -2,4 +2,5 @@
     <string name="app_name">TrisApp</string>
     <string name="cross_sign">X</string>
     <string name="square_sign">O</string>
+    <string name="resetstring">Reset</string>
 </resources>
