@@ -36,12 +36,10 @@ public class MainActivity extends AppCompatActivity {
         b7 = findViewById(R.id.b7);
         b8 = findViewById(R.id.b8);
         b9 = findViewById(R.id.b9);
-        reset = findViewById(R.id.reset);
 
-        multi_computer = findViewById(R.id.multi_computer);
-        multi_locale = findViewById(R.id.multi_locale);
         Button buttonLocalPlay = (Button)findViewById(R.id.multi_locale);
         Button buttonComputerPlay = (Button)findViewById(R.id.multi_computer);
+        Button buttonReset = (Button)findViewById(R.id.reset);
 
         buttonComputerPlay.setOnClickListener(new View.OnClickListener() {
 
@@ -58,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 choice = 0;
+            }
+        });
+
+        buttonReset.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = getIntent();
+                finish();
+                startActivity(intent);
             }
         });
 
@@ -98,12 +106,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.b9:
                 cell = 9;
-                break;
-
-            case R.id.reset:
-                Intent intent = getIntent();
-                finish();
-                startActivity(intent);
                 break;
 
         }
