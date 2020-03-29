@@ -99,7 +99,7 @@
         android:id="@+id/multi_computer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1vsAI"
+        android:text="@string/computer"
         android:layout_below="@+id/third_row"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
@@ -109,11 +109,23 @@
         android:id="@+id/multi_locale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1vs1"
+        android:text="@string/local"
         android:layout_below="@+id/third_row"
         android:layout_marginLeft="270dp"
         android:layout_marginTop="50dp"
         />
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/third_row"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:elegantTextHeight="false"
+        android:text="@string/mode_selection"
+        android:textSize="50px"
+        android:textStyle="bold|italic" />
 
 
 </RelativeLayout>

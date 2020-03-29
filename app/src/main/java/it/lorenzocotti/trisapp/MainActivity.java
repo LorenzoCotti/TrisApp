@@ -37,6 +37,16 @@ public class MainActivity extends AppCompatActivity {
         b8 = findViewById(R.id.b8);
         b9 = findViewById(R.id.b9);
 
+        b1.setEnabled(false);
+        b2.setEnabled(false);
+        b3.setEnabled(false);
+        b4.setEnabled(false);
+        b5.setEnabled(false);
+        b6.setEnabled(false);
+        b7.setEnabled(false);
+        b8.setEnabled(false);
+        b9.setEnabled(false);
+
         Button buttonLocalPlay = (Button)findViewById(R.id.multi_locale);
         Button buttonComputerPlay = (Button)findViewById(R.id.multi_computer);
         Button buttonReset = (Button)findViewById(R.id.reset);
@@ -47,6 +57,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 choice = 1;
+                b1.setEnabled(true);
+                b2.setEnabled(true);
+                b3.setEnabled(true);
+                b4.setEnabled(true);
+                b5.setEnabled(true);
+                b6.setEnabled(true);
+                b7.setEnabled(true);
+                b8.setEnabled(true);
+                b9.setEnabled(true);
             }
         });
 
@@ -55,7 +74,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                choice = 0;
+                choice = 2;
+                b1.setEnabled(true);
+                b2.setEnabled(true);
+                b3.setEnabled(true);
+                b4.setEnabled(true);
+                b5.setEnabled(true);
+                b6.setEnabled(true);
+                b7.setEnabled(true);
+                b8.setEnabled(true);
+                b9.setEnabled(true);
             }
         });
 
@@ -68,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
     }
 

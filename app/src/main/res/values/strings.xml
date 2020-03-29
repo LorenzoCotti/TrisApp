@@ -3,4 +3,7 @@
     <string name="cross_sign">X</string>
     <string name="square_sign">O</string>
     <string name="resetstring">Reset</string>
+    <string name="local">1vs1</string>
+    <string name="computer">1vsAI</string>
+    <string name="mode_selection">Choose a game mode to play!</string>
 </resources>
