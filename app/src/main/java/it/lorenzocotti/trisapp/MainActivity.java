@@ -3,6 +3,7 @@ package it.lorenzocotti.trisapp;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Intent intent = getIntent();
 
         b1 = findViewById(R.id.b1);
         b2 = findViewById(R.id.b2);
@@ -295,9 +297,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (winner != 0) {
             if(winner ==1) {
-                Toast.makeText(getApplicationContext(), "Ha vinto il giocatore 1!", Toast.LENGTH_SHORT).show();
+                showVictoryScreen ();
             } else {
-                Toast.makeText(getApplicationContext(), "Ha vinto il giocatore 2!", Toast.LENGTH_SHORT).show();
+                showVictoryScreen ();
             }
 
             //blocco dei bottoni
@@ -311,6 +313,11 @@ public class MainActivity extends AppCompatActivity {
             b8.setEnabled(false);
             b9.setEnabled(false);
         }
+    }
+
+    public void showVictoryScreen () {
+        Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
+        MainActivity.this.startActivity(myIntent);
     }
 
 }
