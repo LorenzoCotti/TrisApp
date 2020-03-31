@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent intent = getIntent();
+
 
         b1 = findViewById(R.id.b1);
         b2 = findViewById(R.id.b2);
@@ -295,11 +295,9 @@ public class MainActivity extends AppCompatActivity {
             winner = 2;
         }
 
-        if (winner != 0) {
-            if(winner ==1) {
-                showVictoryScreen ();
-            } else {
-                showVictoryScreen ();
+        if (winner != 0) {      //chiedere a prof come passare winner alla second activity
+            if(winner == 1 || winner == 2) {
+                showVictoryScreen();
             }
 
             //blocco dei bottoni
