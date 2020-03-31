@@ -6,6 +6,6 @@
     <string name="local">1vs1</string>
     <string name="computer">1vsAI</string>
     <string name="mode_selection">Choose a game mode to play!</string>
-    <string name="victoryplayer1">Il giocatore 1 ha vinto!</string>
-    <string name="victoryplayer2">Il giocatore 2 ha vinto!</string>
+    <string name="vittoriaUno">Player 1 has won!</string>
+    <string name="vittoriaDue">Player 2 has won!</string>
 </resources>

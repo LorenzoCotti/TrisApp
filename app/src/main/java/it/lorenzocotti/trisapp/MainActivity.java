@@ -295,12 +295,11 @@ public class MainActivity extends AppCompatActivity {
             winner = 2;
         }
 
-        if (winner != 0) {      //chiedere a prof come passare winner alla second activity
-            if(winner == 1 || winner == 2) {
-                showVictoryScreen();
-            }
+        if (winner != 0) {     
 
-            //blocco dei bottoni
+            showVictoryScreen(winner);
+           /**
+            //blocco dei bottoni (con nuova schermata non serve più)
             b1.setEnabled(false);
             b2.setEnabled(false);
             b3.setEnabled(false);
@@ -310,12 +309,21 @@ public class MainActivity extends AppCompatActivity {
             b7.setEnabled(false);
             b8.setEnabled(false);
             b9.setEnabled(false);
+            */
         }
     }
 
-    public void showVictoryScreen () {
-        Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
-        MainActivity.this.startActivity(myIntent);
+
+    public void showVictoryScreen (int vittoria) {
+        if (vittoria == 1) {
+            Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
+            myIntent.putExtra("winner", 1);
+            startActivity(myIntent);;
+        } else {
+            Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
+            myIntent.putExtra("winner", 2);
+            startActivity(myIntent);
+        }
     }
 
 }
