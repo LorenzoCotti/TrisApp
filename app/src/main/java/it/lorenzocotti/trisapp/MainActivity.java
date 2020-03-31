@@ -18,7 +18,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    public Button b1, b2, b3, b4, b5, b6, b7, b8, b9, reset, multi_computer, multi_locale;
+    public Button b1, b2, b3, b4, b5, b6, b7, b8, b9;
     private static int conta = 0;
     private  int choice = 0;
 
