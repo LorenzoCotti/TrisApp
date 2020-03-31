@@ -298,7 +298,7 @@ public class MainActivity extends AppCompatActivity {
         if (winner != 0) {
 
             showVictoryScreen(winner);
-            
+
         }
     }
 

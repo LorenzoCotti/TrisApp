@@ -5,4 +5,5 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="giocatore1">#DEB887</color>
     <color name="giocatore2">#00FFFF</color>
+    <color name="ColorTitle">#D2691E</color>
 </resources>
