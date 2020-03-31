@@ -295,21 +295,10 @@ public class MainActivity extends AppCompatActivity {
             winner = 2;
         }
 
-        if (winner != 0) {     
+        if (winner != 0) {
 
             showVictoryScreen(winner);
-           /**
-            //blocco dei bottoni (con nuova schermata non serve più)
-            b1.setEnabled(false);
-            b2.setEnabled(false);
-            b3.setEnabled(false);
-            b4.setEnabled(false);
-            b5.setEnabled(false);
-            b6.setEnabled(false);
-            b7.setEnabled(false);
-            b8.setEnabled(false);
-            b9.setEnabled(false);
-            */
+            
         }
     }
 
